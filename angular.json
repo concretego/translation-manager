@@ -137,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "translation-manager"
+  "defaultProject": "translation-manager",
+  "cli": {
+    "analytics": false
+  }
 }

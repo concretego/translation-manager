@@ -1,6 +1,6 @@
 <form #formFixMissingKVP="ngForm" (ngSubmit)="fix.next(model_formFixMissingKVP)">
-  <div class="row inner-spacer">
-    <span id="missingKey" class="mono error">{{missingKvp.key}}</span>
+  <div class="inner-spacer">
+    <div id="missingKey" class="mono error">{{missingKvp.key}}</div>
     <div class="col max-width">
       <div class="row">
         <input type="hidden" [(ngModel)]="model_formFixMissingKVP.key" name="key">

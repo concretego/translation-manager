@@ -1,6 +1,14 @@
 :host {
   display: block;
 }
+.kvp-key {
+  line-height: 32px;
+}
+
+.inner-spacer {
+  padding-bottom: 5px;
+}
+
 .wrapper-kvp {
   button.onHover {
     display: none;

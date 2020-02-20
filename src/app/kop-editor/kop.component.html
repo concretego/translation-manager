@@ -81,10 +81,14 @@
   <ng-container *ngIf="kop.showKVPs">
     <div class="wrapper-kvp row inner-spacer center-items" *ngFor="let kvp of kop.KVPs; trackBy: trackByKvp">
       <div class="grow">
-        <div class="row inner-spacer center-items">
-          <span class="mono primary">{{kvp.key}}</span>
-          <input class="grow" type="text" [(ngModel)]="kvp.value" (ngModelChange)="translationService.markLanguageDirty$.next(language)"
-            autocomplete="off">
+        <div class="inner-spacer">
+          <div class="mono primary kvp-key">{{kvp.key}}</div>
+          <div class="col max-width">
+            <div class="row">
+              <input class="grow" type="text" [(ngModel)]="kvp.value" (ngModelChange)="translationService.markLanguageDirty$.next(language)"
+                autocomplete="off">
+            </div>
+          </div>
         </div>
         <div class="grow row inner-spacer center-items" *ngIf="isBaseLanguage && kvp.context != null">
           <i class="grow material-icons secondary-text">subdirectory_arrow_right</i>
